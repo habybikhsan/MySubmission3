@@ -1,4 +1,4 @@
-package com.example.mysubmission3.Fragment
+package com.example.mysubmission3.ui.Fragment
 
 import android.os.Bundle
 import android.util.Log
@@ -8,9 +8,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.mysubmission3.Data.User
+import com.example.mysubmission3.db.Data.User
 import com.example.mysubmission3.R
 import com.example.mysubmission3.Adapter.FollowersAdapter
+import com.example.mysubmission3.BuildConfig
 import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.AsyncHttpResponseHandler
 import cz.msebera.android.httpclient.Header
@@ -38,11 +39,12 @@ class FollowersFragment : Fragment() {
 
     }
 
+    @Suppress("NAME_SHADOWING")
     private fun getuserfollower(id: String) {
         progressBarFollowers.visibility = View.VISIBLE
         val client = AsyncHttpClient()
         client.addHeader("User-Agent", "request")
-        client.addHeader("Authorization", "token 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")
+        client.addHeader("Authorization", "Api_Key $Api_Key")
         val url = "https://api.github.com/users/$id/followers"
         client.get(url, object : AsyncHttpResponseHandler() {
             override fun onSuccess(
@@ -103,5 +105,6 @@ class FollowersFragment : Fragment() {
     companion object {
         private val TAG = FollowersFragment::class.java.simpleName
         const val EXTRA_DATA = "0"
+        private const val Api_Key = BuildConfig.TOKEN
     }
 }

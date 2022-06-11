@@ -1,4 +1,4 @@
-package com.example.mysubmission3.Activity
+package com.example.mysubmission3.ui.activity
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
@@ -10,9 +10,9 @@ import androidx.datastore.preferences.preferencesDataStore
 import com.example.mysubmission3.R
 import androidx.datastore.preferences.core.Preferences
 import androidx.lifecycle.ViewModelProvider
-import com.example.mysubmission3.ViewModel.MenuViewModel
-import com.example.mysubmission3.ViewModel.SettingPreferences
-import com.example.mysubmission3.ViewModel.ViewModelFactory
+import com.example.mysubmission3.ui.ViewModel.MenuViewModel
+import com.example.mysubmission3.ui.ViewModel.SettingPreferences
+import com.example.mysubmission3.helper.ViewModelFactory
 import com.example.mysubmission3.databinding.ActivityDarkModeBinding
 import com.google.android.material.switchmaterial.SwitchMaterial
 

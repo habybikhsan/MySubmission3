@@ -1,4 +1,4 @@
-package com.example.mysubmission3.ViewModel
+package com.example.mysubmission3.ui.ViewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel

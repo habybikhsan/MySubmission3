@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MySubmission3">
         <activity
-            android:name=".Activity.DarkModeActivity"
+            android:name=".ui.activity.DarkModeActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.FavoriteActivity"
+            android:name=".ui.activity.FavoriteActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.UserDetailActivity"
+            android:name=".ui.activity.UserDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.MainActivity"
+            android:name=".ui.activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

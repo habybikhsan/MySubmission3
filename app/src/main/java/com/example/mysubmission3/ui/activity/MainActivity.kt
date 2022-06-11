@@ -1,4 +1,4 @@
-package com.example.mysubmission3.Activity
+package com.example.mysubmission3.ui.activity
 
 import android.app.SearchManager
 import android.content.Context
@@ -14,11 +14,11 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.mysubmission3.Data.User
-import com.example.mysubmission3.ViewModel.MenuViewModel
+import com.example.mysubmission3.db.Data.User
+import com.example.mysubmission3.ui.ViewModel.MenuViewModel
 import com.example.mysubmission3.R
-import com.example.mysubmission3.ViewModel.SettingPreferences
-import com.example.mysubmission3.ViewModel.ViewModelFactory
+import com.example.mysubmission3.ui.ViewModel.SettingPreferences
+import com.example.mysubmission3.helper.ViewModelFactory
 import com.example.mysubmission3.Adapter.ListUserAdapter
 import com.example.mysubmission3.BuildConfig
 import com.example.mysubmission3.databinding.ActivityDarkModeBinding
@@ -84,11 +84,12 @@ class MainActivity : AppCompatActivity() {
             else -> true
         }
     }
+    @Suppress("NAME_SHADOWING")
     private fun getUserSearch(id: String) {
         showLoading(true)
         val client = AsyncHttpClient()
         client.addHeader("User-Agent", "request")
-        client.addHeader("Authorization", "token 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")
+        client.addHeader("Authorization", "Api_Key $Api_Key")
         val url = "https://api.github.com/search/users?q=$id"
         client.get(url, object : AsyncHttpResponseHandler() {
             override fun onSuccess(
@@ -147,7 +148,7 @@ class MainActivity : AppCompatActivity() {
         showLoading(true)
         val client = AsyncHttpClient()
         client.addHeader("User-Agent", "request")
-        client.addHeader("Authorization", "token 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")
+        client.addHeader("Authorization", "Api_Key $Api_Key")
         val url = "https://api.github.com/users"
         client.get(url, object : AsyncHttpResponseHandler() {
             override fun onSuccess(
@@ -242,6 +243,6 @@ class MainActivity : AppCompatActivity() {
     }
     companion object {
         val TAG: String = MainActivity::class.java.simpleName
-        val token = BuildConfig.TOKEN
+        private const val Api_Key = BuildConfig.TOKEN
     }
 }

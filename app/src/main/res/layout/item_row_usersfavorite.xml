@@ -13,6 +13,7 @@
     card_view:cardCornerRadius="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/list_favorite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/cardview_shadow_end_color"

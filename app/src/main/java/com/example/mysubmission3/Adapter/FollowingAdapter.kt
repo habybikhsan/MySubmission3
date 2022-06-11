@@ -1,5 +1,6 @@
 package com.example.mysubmission3.Adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.mysubmission3.R
-import com.example.mysubmission3.Data.User
+import com.example.mysubmission3.db.Data.User
 import kotlinx.android.synthetic.main.item_row_users.view.*
 
 class FollowingAdapter(private val FollowinglistUser: ArrayList<User>) : RecyclerView.Adapter<FollowingAdapter.ListViewHolder>() {
@@ -24,6 +25,7 @@ class FollowingAdapter(private val FollowinglistUser: ArrayList<User>) : Recycle
     override fun getItemCount(): Int = FollowinglistUser.size
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        @SuppressLint("SetTextI18n")
         fun bind(user: User){
             with(itemView){
                 Glide.with(itemView.context)
