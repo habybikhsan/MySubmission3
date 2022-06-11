@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.mysubmission3.R
-import com.example.mysubmission3.Data.User
+import com.example.mysubmission3.db.Data.User
 import kotlinx.android.synthetic.main.item_row_users.view.*
 
 class ListUserAdapter(private val listUser: ArrayList<User>) : RecyclerView.Adapter<ListUserAdapter.ListViewHolder>(){

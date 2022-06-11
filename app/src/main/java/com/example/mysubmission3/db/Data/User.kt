@@ -1,4 +1,4 @@
-package com.example.mysubmission3.Data
+package com.example.mysubmission3.db.Data
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
