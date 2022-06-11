@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">MySubmission3</string>
+    <string name="title_app">Github User App</string>
+    <string name="name">Nama User</string>
+    <string name="username">username</string>
+    <string name="repository">repository : %s</string>
+    <string name="company">company : %s</string>
+    <string name="location">location : %s</string>
+    <string name="tab_text_1">Following</string>
+    <string name="tab_text_2">Follower</string>
+    <string name="search">search</string>
+    <string name="search_hint">masukkan kata</string>
+    <string name="captionid">id :</string>
+    <string name="captiontype">type :</string>
+    <string name="id">id</string>
+    <string name="type">type</string>
+    <string name="menu">menu</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="SettingTheme">Setting Theme</string>
+    <string name="favorite">Favorite</string>
+    <string name="label_add_favorite">Add Favorite</string>
+    <string name="following">Following : %s</string>
+    <string name="followers">Followers : %s</string>
+    <string name="label_empty_favorite">Empity Favorite</string>
+    <string name="no_data">-</string>
+    <string name="captioncompany">Company :</string>
+    <string name="captionlocation">Location :</string>
+    <string name="label_deleted_favorite">Deleted Favorite</string>
+
+</resources>
