@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.mysubmission3.ui.ViewModel.FavoriteAddViewModel
-import com.example.mysubmission3.ui.ViewModel.MainViewModel
+import com.example.mysubmission3.ui.ViewModel.FavoriteViewModel
 
 class UserFavoriteViewModelFactory private constructor(private val mApplication: Application) : ViewModelProvider.NewInstanceFactory() {
     companion object {
@@ -23,8 +23,8 @@ class UserFavoriteViewModelFactory private constructor(private val mApplication:
 
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
-            return MainViewModel(mApplication) as T
+        if (modelClass.isAssignableFrom(FavoriteViewModel::class.java)) {
+            return FavoriteViewModel(mApplication) as T
         } else if (modelClass.isAssignableFrom(FavoriteAddViewModel::class.java)) {
             return FavoriteAddViewModel(mApplication) as T
         }
